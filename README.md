@@ -24,29 +24,12 @@ The Wave-U-Net also participated in the [SiSec separation campaign](https://sise
 
 GPU strongly recommended to avoid very long training times.
 
-The project is based on Python 2.7 and requires [libsndfile](http://mega-nerd.com/libsndfile/) to be installed.
+Use Python 2.7. Python package requirements are specified in environment.yml.
 
-Then, the following Python packages need to be installed:
+Run `conda env create` or use docker:
 
-```
-numpy==1.15.4
-sacred==0.7.3
-tensorflow-gpu==1.8.0
-librosa==0.6.2
-soundfile==0.10.2
-lxml==4.2.1
-musdb==0.2.3
-museval==0.2.0
-google==2.0.1
-protobuf==3.4.0
-```
-
-Alternatively to ``tensorflow-gpu`` the CPU version of TF, ``tensorflow`` can be used, if there is no GPU available.
-All the above packages are also saved in the file ``requirements.txt`` located in this repository, so you can clone the repository and then execute the following in the downloaded repository's path to install all the required packages at once:
-
-``pip install -r requirements.txt``
-
-To recreate the figures from the paper, use functions in ``Plot.py``. The ``matplotlib<3.0`` package needs to be installed as well in that case.
+* `docker build -t waveunet -f Dockerfile .`
+* `docker run --rm --runtime nvidia -it waveunet /bin/bash`
 
 ### Download datasets
 
