@@ -1,17 +1,18 @@
 name: waveunet
 channels:
-- defaults
+  - conda-forge
+  - defaults
 dependencies:
-- ffmpeg=4
-- matplotlib=2.2.3
-- python=2.7
-- scikit-image=0.13.1
-- tensorflow-gpu=1.8.0
-- pip:
-  - sacred==0.7.3
-  - librosa==0.6.2
-  - soundfile==0.10.2
-  - scikits.audiolab==0.11.0
-  - lxml==4.2.1
-  - musdb==0.2.3
-  - museval==0.2.0
+  - ffmpeg=4
+  - numpy=1.15.4
+  - python=2.7
+  - tensorflow-gpu==1.8.0
+  - pip:
+      - google==2.0.1
+      - librosa==0.6.2
+      - lxml==4.2.1
+      - musdb==0.2.3
+      - museval==0.2.0
+      - protobuf==3.4.0
+      - sacred==0.7.3
+      - soundfile==0.10.2
